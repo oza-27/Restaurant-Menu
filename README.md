@@ -1,11 +1,11 @@
-🍽️ Bistro Elegante - Modern Restaurant Website
-A sophisticated, fully-responsive restaurant website built with modern React and Tailwind CSS. Features online menu, table reservations, event booking, and shopping cart functionality.
+# 🍽️ Bistro Elegante - Modern Restaurant Website
+* A sophisticated, fully-responsive restaurant website built with modern React and Tailwind CSS. Features online menu, table reservations, event booking, and shopping cart functionality.
 
 https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3
 
-✨ Live Demo
+## ✨ Live Demo
 🔗 Live Demo Link
-(Note: Replace with your actual deployment link)
+(https://bistro-elegante-omega.vercel.app/)
 
 🚀 Features
 🛒 E-Commerce Functionality
