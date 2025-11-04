@@ -1,16 +1,44 @@
-# React + Vite
+# 🍽️ Bistro Elegante - Modern Restaurant Website
+* A sophisticated, fully-responsive restaurant website built with modern React and Tailwind CSS. Features online menu, table reservations, event booking, and shopping cart functionality.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3
 
-Currently, two official plugins are available:
+## ✨ Live Demo
+🔗 Live Demo Link
+(https://bistro-elegante-omega.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+* 🛒 E-Commerce Functionality
 
-## React Compiler
+1. Shopping Cart System - Add, remove, and update menu items
+2. Real-time Cart Updates - Persistent cart state across pages
+3. Order Summary - Dynamic total calculation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📱 User Experience
 
-## Expanding the ESLint configuration
+1. Multi-page Navigation - Seamless routing with React Router
+2. Responsive Design - Optimized for all devices
+3. Modern UI/UX - Smooth animations and transitions
+4. Search & Filter - Find menu items quickly
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Restaurant Features
+
+1. Interactive Menu - Categorized menu with search
+2. Table Reservation System - Complete booking form
+3. Events & Specials - Showcase weekly events
+4. Contact Management - Customer inquiry handling
+
+## 🎨 Design Excellence
+
+1. Modern Aesthetic - Gradient backgrounds and animations
+2. Professional Typography - Playfair Display & Inter fonts
+3. Color Scheme - Elegant gold (#d4af37) and dark theme
+4. Accessibility - Focus management and ARIA labels
+
+## 🛠️ Technology Stack
+
+1. Frontend:-	React 18, Vite, Tailwind CSS v4
+2. Routing:-	React Router DOM
+3. State Management:-	React Context API + useReducer
+4. Styling:-	Tailwind CSS, Custom Animations
+5. Icons:-	SVG Icons, Emoji
