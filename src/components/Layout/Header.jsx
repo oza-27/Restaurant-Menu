@@ -1,50 +1,65 @@
-import { useState } from 'react';
-import { useCart } from '../context/CartContext';
+import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { useCart } from '../../context/CartContext'
 
-const Header = ({ activeSection }) => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { toggleCart, getCartItemsCount } = useCart();
+const Header = ({ isScrolled }) => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const location = useLocation()
+    const { toggleCart, getCartItemsCount } = useCart()
 
     const navItems = [
-        { name: 'Home', href: '#home' },
-        { name: 'Menu', href: '#menu' },
-        { name: 'Events', href: '#events' },
-        { name: 'About', href: '#about' },
-        { name: 'Contact', href: '#contact' },
-    ];
+        { name: 'Home', path: '/' },
+        { name: 'Menu', path: '/menu' },
+        { name: 'Events', path: '/events' },
+        { name: 'About', path: '/about' },
+        { name: 'Contact', path: '/contact' },
+    ]
+
+    const isActive = (path) => location.pathname === path
 
     return (
-        <header className="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled
+                ? 'bg-white/95 backdrop-blur-md shadow-lg'
+                : 'bg-transparent'
+            }`}>
             <nav className="w-full px-6 py-4">
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center max-w-7xl mx-auto">
                     {/* Logo */}
-                    <div className="text-2xl font-serif font-bold text-primary">
+                    <Link
+                        to="/"
+                        className="text-2xl font-serif font-bold text-primary hover:text-secondary transition-colors"
+                    >
                         Bistro<span className="text-secondary">.</span>
-                    </div>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex space-x-8 items-center">
                         {navItems.map((item) => (
-                            <a
+                            <Link
                                 key={item.name}
-                                href={item.href}
-                                className={`font-sans font-medium transition-all duration-300 hover:text-secondary ${activeSection === item.name.toLowerCase()
-                                        ? 'text-secondary border-b-2 border-secondary'
-                                        : 'text-primary'
+                                to={item.path}
+                                className={`font-sans font-medium transition-all duration-300 relative ${isActive(item.path)
+                                        ? 'text-secondary'
+                                        : 'text-primary hover:text-secondary'
                                     }`}
                             >
                                 {item.name}
-                            </a>
+                                {isActive(item.path) && (
+                                    <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-secondary"></span>
+                                )}
+                            </Link>
                         ))}
 
                         {/* Cart Icon */}
                         <button
                             onClick={toggleCart}
-                            className="relative p-2 text-primary hover:text-secondary transition-colors"
+                            className="relative p-2 text-primary hover:text-secondary transition-colors group"
                         >
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5.5M7 13l2.5 5.5m0 0L17 21" />
-                            </svg>
+                            <div className="w-6 h-6 group-hover:scale-110 transition-transform">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5.5M7 13l2.5 5.5m0 0L17 21" />
+                                </svg>
+                            </div>
                             {getCartItemsCount() > 0 && (
                                 <span className="absolute -top-1 -right-1 bg-secondary text-primary text-xs rounded-full h-5 w-5 flex items-center justify-center font-sans font-bold">
                                     {getCartItemsCount()}
@@ -84,24 +99,27 @@ const Header = ({ activeSection }) => {
 
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
-                    <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+                    <div className="md:hidden mt-4 pb-4 border-t border-gray-200 bg-white/95 backdrop-blur-md rounded-lg shadow-lg">
                         <div className="flex flex-col space-y-4 mt-4">
                             {navItems.map((item) => (
-                                <a
+                                <Link
                                     key={item.name}
-                                    href={item.href}
-                                    className="font-sans font-medium text-primary hover:text-secondary transition-colors"
+                                    to={item.path}
+                                    className={`font-sans font-medium px-4 py-2 rounded-lg transition-colors ${isActive(item.path)
+                                            ? 'bg-secondary text-primary'
+                                            : 'text-primary hover:bg-gray-100'
+                                        }`}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {item.name}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
                 )}
             </nav>
         </header>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header

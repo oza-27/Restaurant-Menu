@@ -1,16 +1,18 @@
+import { Link } from 'react-router-dom'
+
 const Footer = () => {
     const currentYear = new Date().getFullYear()
 
     return (
         <footer className="bg-primary text-white">
             {/* Main Footer Content */}
-            <div className="container mx-auto px-6 py-12">
+            <div className="max-w-7xl mx-auto px-6 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Brand Column */}
                     <div className="lg:col-span-1">
-                        <h3 className="text-2xl font-serif font-bold mb-4">
+                        <Link to="/" className="text-2xl font-serif font-bold mb-4 block">
                             Bistro<span className="text-secondary">.</span>
-                        </h3>
+                        </Link>
                         <p className="text-gray-300 mb-6 leading-relaxed">
                             Experience culinary excellence in the heart of the city. Where every meal is a celebration of flavor, tradition, and innovation.
                         </p>
@@ -33,11 +35,14 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-sans font-semibold mb-6">Quick Links</h4>
                         <ul className="space-y-3">
-                            {['Menu', 'About Us', 'Gallery', 'Testimonials', 'Careers'].map((item) => (
+                            {['Home', 'Menu', 'Events', 'About', 'Contact'].map((item) => (
                                 <li key={item}>
-                                    <a href="#" className="text-gray-300 hover:text-secondary transition-colors duration-300">
+                                    <Link
+                                        to={`/${item.toLowerCase()}`}
+                                        className="text-gray-300 hover:text-secondary transition-colors duration-300"
+                                    >
                                         {item}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -73,7 +78,7 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700">
-                <div className="container mx-auto px-6 py-6">
+                <div className="max-w-7xl mx-auto px-6 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-gray-400 text-sm mb-4 md:mb-0">
                             © {currentYear} Bistro Elegante. All rights reserved.
