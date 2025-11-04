@@ -7,52 +7,38 @@ https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3
 🔗 Live Demo Link
 (https://bistro-elegante-omega.vercel.app/)
 
-🚀 Features
-🛒 E-Commerce Functionality
-Shopping Cart System - Add, remove, and update menu items
+## 🚀 Features
+* 🛒 E-Commerce Functionality
 
-Real-time Cart Updates - Persistent cart state across pages
+1. Shopping Cart System - Add, remove, and update menu items
+2. Real-time Cart Updates - Persistent cart state across pages
+3. Order Summary - Dynamic total calculation
 
-Order Summary - Dynamic total calculation
+## 📱 User Experience
 
-📱 User Experience
-Multi-page Navigation - Seamless routing with React Router
+1. Multi-page Navigation - Seamless routing with React Router
+2. Responsive Design - Optimized for all devices
+3. Modern UI/UX - Smooth animations and transitions
+4. Search & Filter - Find menu items quickly
 
-Responsive Design - Optimized for all devices
+## 🎯 Restaurant Features
 
-Modern UI/UX - Smooth animations and transitions
+1. Interactive Menu - Categorized menu with search
+2. Table Reservation System - Complete booking form
+3. Events & Specials - Showcase weekly events
+4. Contact Management - Customer inquiry handling
 
-Search & Filter - Find menu items quickly
+## 🎨 Design Excellence
 
-🎯 Restaurant Features
-Interactive Menu - Categorized menu with search
+1. Modern Aesthetic - Gradient backgrounds and animations
+2. Professional Typography - Playfair Display & Inter fonts
+3. Color Scheme - Elegant gold (#d4af37) and dark theme
+4. Accessibility - Focus management and ARIA labels
 
-Table Reservation System - Complete booking form
+## 🛠️ Technology Stack
 
-Events & Specials - Showcase weekly events
-
-Contact Management - Customer inquiry handling
-
-🎨 Design Excellence
-Modern Aesthetic - Gradient backgrounds and animations
-
-Professional Typography - Playfair Display & Inter fonts
-
-Color Scheme - Elegant gold (#d4af37) and dark theme
-
-Accessibility - Focus management and ARIA labels
-
-🛠️ Technology Stack
-Category	Technologies
-Frontend	React 18, Vite, Tailwind CSS v4
-Routing	React Router DOM
-State Management	React Context API + useReducer
-Styling	Tailwind CSS, Custom Animations
-Icons	SVG Icons, Emoji
-Images	Unsplash API (High-quality restaurant images)
-Deployment	Netlify/Vercel
-📦 Installation & Setup
-Prerequisites
-Node.js (v16 or higher)
-
-npm or yarn
+1. Frontend:-	React 18, Vite, Tailwind CSS v4
+2. Routing:-	React Router DOM
+3. State Management:-	React Context API + useReducer
+4. Styling:-	Tailwind CSS, Custom Animations
+5. Icons:-	SVG Icons, Emoji
