@@ -1,16 +1,58 @@
-# React + Vite
+🍽️ Bistro Elegante - Modern Restaurant Website
+A sophisticated, fully-responsive restaurant website built with modern React and Tailwind CSS. Features online menu, table reservations, event booking, and shopping cart functionality.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3
 
-Currently, two official plugins are available:
+✨ Live Demo
+🔗 Live Demo Link
+(Note: Replace with your actual deployment link)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
+🛒 E-Commerce Functionality
+Shopping Cart System - Add, remove, and update menu items
 
-## React Compiler
+Real-time Cart Updates - Persistent cart state across pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Order Summary - Dynamic total calculation
 
-## Expanding the ESLint configuration
+📱 User Experience
+Multi-page Navigation - Seamless routing with React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Responsive Design - Optimized for all devices
+
+Modern UI/UX - Smooth animations and transitions
+
+Search & Filter - Find menu items quickly
+
+🎯 Restaurant Features
+Interactive Menu - Categorized menu with search
+
+Table Reservation System - Complete booking form
+
+Events & Specials - Showcase weekly events
+
+Contact Management - Customer inquiry handling
+
+🎨 Design Excellence
+Modern Aesthetic - Gradient backgrounds and animations
+
+Professional Typography - Playfair Display & Inter fonts
+
+Color Scheme - Elegant gold (#d4af37) and dark theme
+
+Accessibility - Focus management and ARIA labels
+
+🛠️ Technology Stack
+Category	Technologies
+Frontend	React 18, Vite, Tailwind CSS v4
+Routing	React Router DOM
+State Management	React Context API + useReducer
+Styling	Tailwind CSS, Custom Animations
+Icons	SVG Icons, Emoji
+Images	Unsplash API (High-quality restaurant images)
+Deployment	Netlify/Vercel
+📦 Installation & Setup
+Prerequisites
+Node.js (v16 or higher)
+
+npm or yarn
