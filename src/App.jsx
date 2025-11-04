@@ -6,6 +6,7 @@ import Menu from './pages/Menu'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Events from './pages/Events'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/events" element={<Events />} />
         </Routes>
       </Layout>
+      <Analytics />
     </CartProvider>
   )
 }
